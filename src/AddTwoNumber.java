@@ -10,7 +10,7 @@
 
 import java.io.IOException;
 
-class SolutionAddTwoNumber {
+class AddTwoNumber {
 
     private static class ListNode {
         int val;
@@ -188,7 +188,7 @@ class SolutionAddTwoNumber {
         ListNode l1 = stringToListNode(num1);
         ListNode l2 = stringToListNode(num2);
 
-        ListNode ret = new SolutionAddTwoNumber().addTwoList(l1, l2);
+        ListNode ret = new AddTwoNumber().addTwoList(l1, l2);
         String out = listNodeToString(ret);
         System.out.print(out);
     }
