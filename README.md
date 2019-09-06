@@ -4,6 +4,7 @@ Implementation of leetcode problem
 # Problems
 ## [1. Add Two Numbers](./python/add_linked_list.py)
 
+* **Completed Date**: 09/05/2019
 * **Category**: Medium
 * **Tags**: Linked List
 * `leetcode problem` [link](https://leetcode.com/problems/add-two-numbers/)
@@ -35,6 +36,7 @@ Explanation: 342 + 465 = 807.
 ---
 ## [2. Longest Substring Without Repeating Characters](./python/length_of_longest_substring.py)
 
+* **Completed Date**: 09/05/2019
 * **Category**: Medium
 * **Tags**: array, sliding window
 * `leetcode problem` [link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
@@ -74,3 +76,38 @@ Explanation: The answer is "wke", with the length of 3.
 
 ### Edge cases
 + Forgot to update `i = max(i, seen[j] + 1)` for the case `abba`
+---
+## [3. Product of Array Except Self](./python/product_of_array_except_self.py)
+
+* **Completed Date**: 09/05/2019
+* **Category**: Medium
+* **Tags**: array, math
+* `leetcode problem` [link](https://leetcode.com/problems/product-of-array-except-self/)
+
+### Description
+Given a string, find the length of the longest substring without repeating characters.
+
+Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+
+_Example_:
+```
+Input:  [1,2,3,4]
+Output: [24,12,8,6]
+```
+Note: Please solve it without division and in O(n).
+
+Follow up:
+Could you solve it with constant space complexity? (The output array does not count as extra space for the purpose of space complexity analysis.)
+
+### Solution
+1. At index `i`, store the product of its left elements
+2. At index `i`, store the product of its right elements
+3. For every index `i`, the result can be calculated by multiplying its left and right product
+
+### Complexity
+* Runtime complexity `O(n)` to calculate left and right products of all elements
+* Space complexity `O(n)` to store the output
+
+### Edge cases
++ Input containing `0`
++ Input containing negative numbers
