@@ -4,8 +4,8 @@ Implementation of leetcode problem
 # Problems
 ## [1. Add Two Numbers](./python/add_linked_list.py)
 
-* **Category**: Medium\
-* **Tags**: Linked List\
+* **Category**: Medium
+* **Tags**: Linked List
 * `leetcode problem` [link](https://leetcode.com/problems/add-two-numbers/)
 
 ### Description
@@ -35,8 +35,8 @@ Explanation: 342 + 465 = 807.
 ---
 ## [2. Longest Substring Without Repeating Characters](./python/length_of_longest_substring.py)
 
-* **Category**: Medium\
-* **Tags**: array, sliding window\
+* **Category**: Medium
+* **Tags**: array, sliding window
 * `leetcode problem` [link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ### Description
