@@ -4,7 +4,7 @@ Implementation of leetcode problem
 # Problems
 ## [1. Add Two Numbers](./python/add_linked_list.py)
 
-* **Completed Date**: 09/05/2019
+* **Completed Date**: 09/04/2019
 * **Category**: Medium
 * **Tags**: Linked List
 * `leetcode problem` [link](https://leetcode.com/problems/add-two-numbers/)
@@ -106,6 +106,40 @@ Could you solve it with constant space complexity? (The output array does not co
 
 ### Complexity
 * Runtime complexity `O(n)` to calculate left and right products of all elements
+* Space complexity `O(n)` to store the output
+
+### Edge cases
++ Input containing `0`
++ Input containing negative numbers
+
+## [4. Longest Palindromic Substring](./python/longest_palindrome_substring.py)
+
+* **Completed Date**: 09/06/2019
+* **Category**: Medium
+* **Tags**: string, dynamic programming
+* `leetcode problem` [link](https://leetcode.com/problems/longest-palindromic-substring/)
+
+### Description
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+
+_Example 1_:
+```
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+```
+_Example 2_:
+```
+Input: "cbbd"
+Output: "bb"
+```
+### Solution
+1. Expanding centers to find the longest palindrome. There will be `2n - 1` centers since the center of the palindrome can contain one or two character
+2. Having two pointers, `left` and `right` to calculate the lenght of palindrome given current center
+3. Compare and assign longest palindrome of each center to the result
+
+### Complexity
+* Runtime complexity `O(n^2`. There are `2n - 1` centers and it takes `O(n)` to expand each of them
 * Space complexity `O(n)` to store the output
 
 ### Edge cases
