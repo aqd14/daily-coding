@@ -4,8 +4,9 @@ Implementation of leetcode problem
 # Problems
 ## [1. Add Two Numbers](./python/add_linked_list.py)
 
-**Category**: Medium\
-**Tags**: Linked List
+* **Category**: Medium\
+* **Tags**: Linked List\
+* `leetcode problem` [link](https://leetcode.com/problems/add-two-numbers/)
 
 ### Description
 You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in **reverse order** and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
