@@ -2,7 +2,7 @@
 Implementation of leetcode problem
 
 ## Problems
-* [#1 Add Two Numbers](./python/add_linked_list.py)
+* [1. Add Two Numbers](./python/add_linked_list.py)
 
 **Category**: Medium\
 **Tags**: Linked List
@@ -26,4 +26,4 @@ Explanation: 342 + 465 = 807.
 4. Move to next `node` if available
 
 ## Edge cases
-+ Where `*carry*` is not zero after finish iterating both lists, i.e., `5 + 5`
++ Where `carry` is not zero after finish iterating both lists, i.e., `5 + 5`
