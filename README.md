@@ -145,3 +145,36 @@ Output: "bb"
 ### Edge cases
 + Input containing `0`
 + Input containing negative numbers
+---
+## [4. Two Sum](./python/two_sum.py)
+
+* **Completed Date**: 09/06/2019
+* **Category**: Easy
+* **Tags**: array, hash table
+* `leetcode problem` [link](https://leetcode.com/problems/two-sum/)
+
+### Description
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+
+_Example_1:
+```
+Input: nums = [10, 15, 3, 7], k = 17
+Output: True
+nums[0] + nums[3] = 10 + 7 = 17
+```
+_Example 2_:
+```
+Input: nums = [10, 15, 3, 8], k = 17
+Output: False
+There are no numbers adding up to 17
+```
+### Solution
+1. Having a `dictionary` keeping track of visited numbers as its keys
+2. For every number, check if their difference (`k - current_number`) exists
+
+### Complexity
+* Runtime complexity `O(n)`
+* Space complexity `O(n)` for the dictionary
+
+### Edge cases
+**N/A**
