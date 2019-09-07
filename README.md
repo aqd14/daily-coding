@@ -146,9 +146,9 @@ Output: "bb"
 + Input containing `0`
 + Input containing negative numbers
 ---
-## [4. Two Sum](./python/two_sum.py)
+## [5. Two Sum](./python/two_sum.py)
 
-* **Completed Date**: 09/06/2019
+* **Completed Date**: 09/07/2019
 * **Category**: Easy
 * **Tags**: array, hash table
 * `leetcode problem` [link](https://leetcode.com/problems/two-sum/)
