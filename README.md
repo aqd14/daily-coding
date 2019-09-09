@@ -178,3 +178,56 @@ There are no numbers adding up to 17
 
 ### Edge cases
 **N/A**
+
+## [6. Valid Parentheses](./python/valid_parentheses.py)
+
+* **Completed Date**: 09/08/2019
+* **Category**: Easy
+* **Tags**: array, hash table, stack
+* `leetcode problem` [link](https://leetcode.com/problems/valid-parentheses/)
+
+### Description
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+* Open brackets must be closed by the same type of brackets.
+* Open brackets must be closed in the correct order.
+* Note that an empty string is also considered valid.
+
+*Example 1*:
+```
+Input: "()"
+Output: true
+```
+*Example 2*:
+```
+Input: "()[]{}"
+Output: true
+```
+*Example 3*:
+```
+Input: "(]"
+Output: false
+```
+*Example 4*:
+```
+Input: "([)]"
+Output: false
+```
+*Example 5*:
+```
+Input: "{[]}"
+Output: true
+```
+### Solution
+1. Scan every character in the input string
+2. If the character is an opening parenthesis, add to `stack`
+3. If the character is an closing parenthesis, check if it is the closing part of most recently added opening element
+
+### Complexity
+* Runtime complexity `O(n)` to scan entire string
+* Space complexity `O(n)` for the stack
+
+### Edge cases
+* String contains only opening parentheses
