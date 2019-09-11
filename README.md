@@ -178,7 +178,7 @@ There are no numbers adding up to 17
 
 ### Edge cases
 **N/A**
-
+---
 ## [6. Valid Parentheses](./python/valid_parentheses.py)
 
 * **Completed Date**: 09/08/2019
@@ -231,3 +231,43 @@ Output: true
 
 ### Edge cases
 * String contains only opening parentheses
+
+
+## [7. Find First and Last Position of Element in Sorted Array](./python/first_and_last_positions.py)
+
+* **Completed Date**: 09/10/2019
+* **Category**: Medium
+* **Tags**: array, binary search
+* `leetcode problem` [link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+
+### Description
+Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
+
+Your algorithm's runtime complexity must be in the order of O(log n).
+
+If the target is not found in the array, return [-1, -1].
+
+*Example 1*:
+```
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+```
+*Example 2*:
+```
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
+```
+### Solution
+1. Search for leftmost index of the target
+2. Search for rightmost index of the target
+3. Each match `mid` where `nums[mid] == target` is a candidate index
+4. While searching, update the `low` and `high` values accordingly based on if we are searching on the left or right side
+
+### Complexity
+* Runtime complexity `O(log n)` for binary searching the indices
+* Space complexity `O(1)`
+
+### Edge cases
+* No target in the input array
+* Input array contains only target value
+
