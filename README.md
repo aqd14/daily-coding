@@ -311,3 +311,50 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 #### For recursive solution
 * Runtime complexity `O(n)` to iterate entire the linked list
 * Space complexity `O(n)` to store recursive calls
+---
+## [9. First Missing Positive](./python/first_missing_positive.py)
+
+* **Completed Date**: 09/17/2019
+* **Category**: Hard
+* **Tags**: array
+* `leetcode problem` [link](https://leetcode.com/problems/first-missing-positive/)
+
+### Description
+Given an unsorted integer array, find the smallest missing positive integer.
+
+**Example 1**:
+```
+Input: [1,2,0]
+Output: 3
+```
+**Example 2**:
+```
+Input: [3,4,-1,1]
+Output: 2
+```
+**Example 3**:
+```
+Input: [7,8,9,11,12]
+Output: 1
+```
+**Note**:
+Your algorithm should run in `O(n)` time and uses constant extra space.
+
+### Solution
+#### Using hash table
+1. Find max value of the list
+2. Add all positive integers in the list to the dictionary
+3. Iterate from `1` to `max`, return a value if it's not in the dictionary
+
+#### Tricky solution
+1. For a value `n` in the list, store it at position `n-1` in the list if possible
+2. Scan the list, if `nums[i] != i+1`, return `i+1`, which is the smallest positive integer missing from the list
+
+### Complexity
+#### Using hash table
+* Runtime complexity `O(n)` to iterate the list
+* Space complexity `O(n)` for the dictionary
+
+#### Tricky solution
+* Runtime complexity `O(n)` to iterate the list
+* Space complexity `O(1)`
