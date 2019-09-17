@@ -277,7 +277,7 @@ Output: [-1,-1]
 * **Completed Date**: 09/16/2019
 * **Category**: Easy
 * **Tags**: linked list, recursion
-* `leetcode problem` [link](https://leetcode.com/problems/reverse-linked-list/
+* `leetcode problem` [link](https://leetcode.com/problems/reverse-linked-list/)
 
 ### Description
 Reverse a singly linked list.
