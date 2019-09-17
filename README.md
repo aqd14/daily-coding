@@ -271,3 +271,43 @@ Output: [-1,-1]
 * No target in the input array
 * Input array contains only target value
 
+---
+## [8. Reverse a linked list](./python/reverse_linked_list.py)
+
+* **Completed Date**: 09/16/2019
+* **Category**: Easy
+* **Tags**: linked list, recursion
+* `leetcode problem` [link](https://leetcode.com/problems/reverse-linked-list/
+
+### Description
+Reverse a singly linked list.
+
+Example:
+```
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+```
+Follow up:
+
+A linked list can be reversed either iteratively or recursively. Could you implement both?
+
+### Solution
+#### Iterative solution
+1. Assign `new_head = None` and `current = head`
+2. Iterate through the linked list. At every step, reverse the direction
+3. Need to have a variable to keep track of `current.next` before pointing back `current.next` to the node before it
+
+#### Recursive solution
+1. Base case: if `head == null || head.next == null` return `head`. This node will become a new reversed head
+2. Let's say the list has been reversed from node `k+1` to the end
+3. To reverse node `k`, we need to do `node_k.next.next = node_k`
+4. To avoid infinite cycle, set `node_k.next = null`
+
+### Complexity
+#### For iterative solution
+* Runtime complexity `O(n)` to iterate entire the linked list
+* Space complexity `O(1)`
+
+#### For recursive solution
+* Runtime complexity `O(n)` to iterate entire the linked list
+* Space complexity `O(n)` to store recursive calls
