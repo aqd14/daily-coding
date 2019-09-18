@@ -358,3 +358,35 @@ Your algorithm should run in `O(n)` time and uses constant extra space.
 #### Tricky solution
 * Runtime complexity `O(n)` to iterate the list
 * Space complexity `O(1)`
+---
+## [10. Single Number](./python/single_number.py)
+
+* **Completed Date**: 09/17/2019
+* **Category**: Easy
+* **Tags**: `array`, `bit manipulation`
+* `leetcode problem` [link](https://leetcode.com/problems/single-number/)
+
+### Description
+Given a **non-empty** array of integers, every element appears twice except for one. Find that single one.
+
+**Note**:
+
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+**Example 1**:
+```
+Input: [2,2,1]
+Output: 1
+```
+**Example 2**:
+```
+Input: [4,1,2,1,2]
+Output: 4
+```
+### Solution
+1. Using XOR operator to find the single element
+2. Same values when being XORed will yield `0`
+
+### Complexity
+* Runtime complexity `O(n)` to iterate the list
+* Space complexity `O(1)`
