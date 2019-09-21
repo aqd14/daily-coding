@@ -460,3 +460,20 @@ Output: False
 ### Complexity
 * Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
 * Space complexity `O(h)` to store the recursive calls where `h` is the height of the binary tree
+---
+## [13. Count Univalue Subtrees](./python/count_univalue_subtrees.py)
+
+* **Completed Date**: 09/21/2019
+* **Category**: Medium
+* **Tags**: `binary tree`, `recursion`
+* `leetcode problem:` **NA**
+
+### Description
+Given the `root`, count the number of univalue subtrees.
+
+### Solution
+Recursively calculate the numbers of univalue subtrees for every node. At any given node, the total number of univalue subtrees corresponding to that node `L(node) = L(node.left) + L(node.right) + delta`. Here, delta can be either `1` or `zero` depending on whether 1) any its children contains non-universal value or 2) its value and its direct children are the same.
+
+### Complexity
+* Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
+* Space complexity `O(h)` to store the recursive calls where `h` is the height of the binary tree
