@@ -431,3 +431,32 @@ At first, this looks like a very simple problem where you can just need to itera
 ### Complexity
 * Runtime complexity `O(n)` to iterate the list
 * Space complexity `O(1)`
+---
+## [12. Univalued Binary Tree](./python/univalued_binary_tree.py)
+
+* **Completed Date**: 09/20/2019
+* **Category**: Easy
+* **Tags**: `binary tree`, `recursion`
+* `leetcode problem` [link](https://leetcode.com/problems/univalued-binary-tree/)
+
+### Description
+A binary tree is univalued if every node in the tree has the same value.
+
+Return `true` if and only if the given tree is univalued.
+
+**Example 1**:
+```
+Input: [1,1,1,1,1,null,1]
+Output: True
+```
+**Example 2**:
+```
+Input: [2,2,2,5,2]
+Output: False
+```
+### Solution
+1. Recursively traverse the root and all of its children to check if all the nodes' values are equal
+
+### Complexity
+* Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
+* Space complexity `O(h)` to store the recursive calls where `h` is the height of the binary tree
