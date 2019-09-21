@@ -390,3 +390,44 @@ Output: 4
 ### Complexity
 * Runtime complexity `O(n)` to iterate the list
 * Space complexity `O(1)`
+---
+## [11. Non-decreasing Array](./python/non_decreasing_array.py)
+
+* **Completed Date**: 09/20/2019
+* **Category**: **Not** Easy
+* **Tags**: `array`
+* `leetcode problem` [link](https://leetcode.com/problems/non-decreasing-array/)
+
+### Description
+Given an array with `n` integers, your task is to check if it could become non-decreasing by modifying at most 1 element.
+
+We define an array is non-decreasing if `array[i] <= array[i + 1]` holds for every `i (1 <= i < n)`.
+
+Example 1:
+```
+Input: [4,2,3]
+Output: True
+```
+Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
+Example 2:
+```
+Input: [4,2,1]
+Output: False
+```
+Explanation: You can't get a non-decreasing array by modify at most one element.
+**Note**: The n belongs to [1, 10,000].
+
+### Solution
+At first, this looks like a very simple problem where you can just need to iterate the array and count how many times `nums[i] > nums[i+1]`. If `count <= 1`, return `True`, `else return False`. However, the problem has several edge cases that need to be carefully consider. 
+
++ First, there is only one violation at `i = 0`. In this case, we just need to change `nums[0]` to `nums[1]`.
++ Second, there is only one violation at `i = n - 2` where `n` is length of the list. In this case, we just need to change `nums[n-1] = nums[n-2]` to maintain the order.
++ Third, let's call `p` is the index where `nums[p] > nums[p+1]`. There are few possible modification we can make to correct the order. We can change `nums[p]` to any value between `nums[p-1]` and `nums[p+1]` as long as `nums[p-1] <= nums[p+1]`. We can also change `nums[p+1]` to any value between `nums[p]` and `nums[p+2]` as long as `nums[p] <= nums[p+2]`.
+
+1. Initialize a variable `p = None` where `p` is the violating index with `nums[p] > nums[p+1]`
+2. Iterate over the list, check if `nums[i] > nums[i+1]`, continue to check `if p != None: return False`. Otherwise, assign `p = i`.
+3. Return `True` if `p` is either equals to `None`, where there is no violation or `p` falls into one of the above conditions.
+
+### Complexity
+* Runtime complexity `O(n)` to iterate the list
+* Space complexity `O(1)`
