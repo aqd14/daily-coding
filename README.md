@@ -489,8 +489,8 @@ Recursively calculate the numbers of univalue subtrees for every node. At any gi
 Given an integer `k` and a binary search tree, find the floor (less than or equal to) of `k`, and the ceiling (larger than or equal to) of `k`. If either does not exist, then print them as None.
 
 ### Solution
-1. **Find floor** if the given key `k` is less than current node value then the floor must be of the left subtree. If key `k` is greater then current node value, then the floor might the current node or a node in the right subtree given that node's value is lesser or equal to `k`, if exist.
-2. **Find ceiling** Similar to `find_floor` but with reverse comparison and interchanging left and right subtree
+1. **Find floor:** If the given key `k` is less than current node value then the floor must be of the left subtree. If key `k` is greater then current node value, then the floor might be either the current node or a node in the right subtree given that there exists a node with value lesser or equal to `k`.
+2. **Find ceiling:** Similar to `find_floor` but with reverse comparison and interchanging left and right subtree
 
 ### Complexity
 * Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
