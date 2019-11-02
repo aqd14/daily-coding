@@ -495,3 +495,65 @@ Given an integer `k` and a binary search tree, find the floor (less than or equa
 ### Complexity
 * Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
 * Space complexity `O(h)` to store the recursive calls where `h` is the height of the binary tree
+---
+## [15. Merge Intervals](./python/sorted_array_to_BST.py)
+
+* **Completed Date**: 11/01/2019
+* **Category**: Easy
+* **Tags**: `binary search tree`, `array`
+* `leetcode problem:` [link](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+
+### Description
+Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+
+Example:
+```
+Given the sorted array: [-10,-3,0,5,9],
+
+One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+```
+### Solution
+1. The `mid` element of the sorted array will be the root
+2. Recursively construct `roots` of all subtrees, on the left and on the right of the `root`.
+
+### Complexity
+* Runtime complexity `O(n)`
+* Space complexity `O(n)`
+---
+## [16. Merge Intervals](./python/merge_intervals.py)
+
+* **Completed Date**: 11/01/2019
+* **Category**: Medium
+* **Tags**: `array`, `sorting`
+* `leetcode problem:` [link](https://leetcode.com/problems/merge-intervals/)
+
+### Description
+Given a collection of intervals, merge all overlapping intervals.
+
+Example 1:
+```
+Input: [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+```
+Example 2:
+```
+Input: [[1,4],[4,5]]
+Output: [[1,5]]
+Explanation: Intervals [1,4] and [4,5] are considered overlapping.
+```
+### Solution
+1. Sort the internal interval by their starting points
+2. For each interval, check to decide if we should update previous `ending` point or add new interval to the `output` list if there is no overlapping.
+
+### Complexity
+* Runtime complexity `O(nlogn)` for sorting
+* Space complexity `O(n)` to store the output
