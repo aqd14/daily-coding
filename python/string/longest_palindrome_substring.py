@@ -1,4 +1,4 @@
-'''
+"""
 Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
 Example 1:
@@ -10,11 +10,12 @@ Example 2:
 
 Input: "cbbd"
 Output: "bb"
-'''
+"""
+
 
 class Solution:
-
-    def longestPalindrome(self, s: str) -> str:
+    @staticmethod
+    def longest_palindrome(s: str) -> str:
         """[summary]
         
         Parameters
@@ -31,14 +32,15 @@ class Solution:
             return s
         result = s[:1]
         for i in range(len(s)):
-            l1 = self.extendTheCenter(s, i, i)
-            l2 = self.extendTheCenter(s, i, i+1)
+            l1 = self.extend_the_center(s, i, i)
+            l2 = self.extend_the_center(s, i, i + 1)
             l = l1 if len(l1) > len(l2) else l2
             if len(l) > len(result):
                 result = l
         return result
 
-    def extendTheCenter(self, s: str, left: int, right: int) -> int:
+    @staticmethod
+    def extend_the_center(s: str, left: int, right: int) -> int:
         """Get longest length of palindrome expanding from current left and right indices
         
         Parameters
@@ -60,7 +62,8 @@ class Solution:
             right += 1
         return s[left+1:right]
 
-    def longestPalindrome2(self, s: str) -> str:
+    @staticmethod
+    def longest_palindrome_2(s: str) -> str:
         """Dynamic programming implementation
         
         Parameters

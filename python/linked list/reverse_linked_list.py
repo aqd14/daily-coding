@@ -3,38 +3,38 @@ class ListNode(object):
         self.val = x
         self.next = None
 
-  # Function to print the list
-    def printList(self):
+    # Function to print the list
+    def print_list(self):
         node = self
         output = ''
-        while node != None:
+        while node:
             output += str(node.val)
             output += " "
             node = node.next
         print(output)
 
-  # Iterative Solution
-    def reverseIteratively(self, head):
+    # Iterative Solution
+    def reverse_iteratively(self, head):
         current = head
-        newHead = None
+        reversed_head = None
         while current:
-            nextNode = current.next # next node to the right
-            current.next = newHead # link backward
-            newHead = current
-            current = nextNode
+            next_node = current.next # next node to the right
+            current.next = reversed_head # link backward
+            reversed_head = current
+            current = next_node
 
-        return newHead
+        return reversed_head
         # Implement this.
 
-  # Recursive Solution
-    def reverseRecursively(self, head):
+    # Recursive Solution
+    def reverse_recursively(self, head):
         # if linked list is empty or contains only one node, 
         # we already have the list reversed
         if head is None or head.next is None:
             return head
 
         # otherwise, continue to iterate the list until the end
-        newHead = self.reverseRecursively(head.next)
+        new_head = self.reverse_recursively(head.next)
         # say we already iterated the list until there are only two nodes left
         # x1 -> x2 ... -> 1 -> 2 -> None
         # After the last call, we have the head->next now point to 2
@@ -43,7 +43,8 @@ class ListNode(object):
         head.next.next = head
         # point the next of node 1 to None to avoid cycle
         head.next = None
-        return newHead
+        return new_head
+
 
 if __name__ == "__main__":
     # Test Program
@@ -59,10 +60,10 @@ if __name__ == "__main__":
     node3.next = testTail
 
     print("Initial list: ")
-    testHead.printList()
+    testHead.print_list()
     # 4 3 2 1 0
-    testHead.reverseIteratively(testHead)
+    testHead.reverse_iteratively(testHead)
     # testHead.reverseRecursively(testHead)
     print("List after reversal: ")
-    testTail.printList()
+    testTail.print_list()
     # 0 1 2 3 4

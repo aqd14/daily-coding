@@ -5,8 +5,9 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
-    def isUnivalTree(self, root: TreeNode) -> bool:
+    def is_unival_tree(self, root: TreeNode) -> bool:
         return self.helper(root, root.val)
     
     def helper(self, node: TreeNode, value: int) -> bool:

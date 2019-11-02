@@ -2,7 +2,14 @@
 
 from typing import List
 
+
 def merge(intervals: List[List[int]]) -> List[List[int]]:
+    """
+    Sort the interval by their starting points. Compare the ending point of current interval with
+    next examining interval to determine if we can merge them
+    :param intervals: list of intervals
+    :return: merged interval
+    """
     if intervals is None or len(intervals) == 1:
         return intervals
 

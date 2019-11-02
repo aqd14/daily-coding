@@ -2,7 +2,7 @@
 Implementation of leetcode problem
 
 # Problems
-## [1. Add Two Numbers](./python/add_linked_list.py)
+## [1. Add Two Numbers](python/linked%20list/add_linked_list.py)
 
 * **Completed Date**: 09/04/2019
 * **Category**: Medium
@@ -34,7 +34,7 @@ Explanation: 342 + 465 = 807.
 ### Edge cases
 + Where `carry` is not zero after finish iterating both lists, i.e., `5 + 5`
 ---
-## [2. Longest Substring Without Repeating Characters](./python/length_of_longest_substring.py)
+## [2. Longest Substring Without Repeating Characters](python/string/length_of_longest_substring.py)
 
 * **Completed Date**: 09/05/2019
 * **Category**: Medium
@@ -77,7 +77,7 @@ Explanation: The answer is "wke", with the length of 3.
 ### Edge cases
 + Forgot to update `i = max(i, seen[j] + 1)` for the case `abba`
 ---
-## [3. Product of Array Except Self](./python/product_of_array_except_self.py)
+## [3. Product of Array Except Self](python/array/product_of_array_except_self.py)
 
 * **Completed Date**: 09/05/2019
 * **Category**: Medium
@@ -112,7 +112,7 @@ Could you solve it with constant space complexity? (The output array does not co
 + Input containing `0`
 + Input containing negative numbers
 
-## [4. Longest Palindromic Substring](./python/longest_palindrome_substring.py)
+## [4. Longest Palindromic Substring](python/string/longest_palindrome_substring.py)
 
 * **Completed Date**: 09/06/2019
 * **Category**: Medium
@@ -146,7 +146,7 @@ Output: "bb"
 + Input containing `0`
 + Input containing negative numbers
 ---
-## [5. Two Sum](./python/two_sum.py)
+## [5. Two Sum](python/array/two_sum.py)
 
 * **Completed Date**: 09/07/2019
 * **Category**: Easy
@@ -179,7 +179,7 @@ There are no numbers adding up to 17
 ### Edge cases
 **N/A**
 ---
-## [6. Valid Parentheses](./python/valid_parentheses.py)
+## [6. Valid Parentheses](python/stack%20and%20queue/valid_parentheses.py)
 
 * **Completed Date**: 09/08/2019
 * **Category**: Easy
@@ -233,7 +233,7 @@ Output: true
 * String contains only opening parentheses
 
 
-## [7. Find First and Last Position of Element in Sorted Array](./python/first_and_last_positions.py)
+## [7. Find First and Last Position of Element in Sorted Array](python/array/first_and_last_positions.py)
 
 * **Completed Date**: 09/10/2019
 * **Category**: Medium
@@ -272,7 +272,7 @@ Output: [-1,-1]
 * Input array contains only target value
 
 ---
-## [8. Reverse a linked list](./python/reverse_linked_list.py)
+## [8. Reverse a linked list](python/linked%20list/reverse_linked_list.py)
 
 * **Completed Date**: 09/16/2019
 * **Category**: Easy
@@ -312,7 +312,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 * Runtime complexity `O(n)` to iterate entire the linked list
 * Space complexity `O(n)` to store recursive calls
 ---
-## [9. First Missing Positive](./python/first_missing_positive.py)
+## [9. First Missing Positive](python/array/first_missing_positive.py)
 
 * **Completed Date**: 09/17/2019
 * **Category**: Hard
@@ -359,7 +359,7 @@ Your algorithm should run in `O(n)` time and uses constant extra space.
 * Runtime complexity `O(n)` to iterate the list
 * Space complexity `O(1)`
 ---
-## [10. Single Number](./python/single_number.py)
+## [10. Single Number](python/bit%20manipulation/single_number.py)
 
 * **Completed Date**: 09/17/2019
 * **Category**: Easy
@@ -391,7 +391,7 @@ Output: 4
 * Runtime complexity `O(n)` to iterate the list
 * Space complexity `O(1)`
 ---
-## [11. Non-decreasing Array](./python/non_decreasing_array.py)
+## [11. Non-decreasing Array](python/array/non_decreasing_array.py)
 
 * **Completed Date**: 09/20/2019
 * **Category**: **Not** Easy
@@ -432,7 +432,7 @@ At first, this looks like a very simple problem where you can just need to itera
 * Runtime complexity `O(n)` to iterate the list
 * Space complexity `O(1)`
 ---
-## [12. Univalued Binary Tree](./python/univalued_binary_tree.py)
+## [12. Univalued Binary Tree](python/tree/univalued_binary_tree.py)
 
 * **Completed Date**: 09/20/2019
 * **Category**: Easy
@@ -461,7 +461,7 @@ Output: False
 * Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
 * Space complexity `O(h)` to store the recursive calls where `h` is the height of the binary tree
 ---
-## [13. Count Univalue Subtrees](./python/count_univalue_subtrees.py)
+## [13. Count Univalue Subtrees](python/tree/count_univalue_subtrees.py)
 
 * **Completed Date**: 09/21/2019
 * **Category**: Medium
@@ -478,7 +478,7 @@ Recursively calculate the numbers of univalue subtrees for every node. At any gi
 * Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
 * Space complexity `O(h)` to store the recursive calls where `h` is the height of the binary tree
 ---
-## [14. Floor and Ceiling of a Binary Search Tree](./python/floor_and_ceiling_BST.py)
+## [14. Floor and Ceiling of a Binary Search Tree](python/binary%20search%20tree/floor_and_ceiling_BST.py)
 
 * **Completed Date**: 09/21/2019
 * **Category**: Medium
@@ -496,7 +496,7 @@ Given an integer `k` and a binary search tree, find the floor (less than or equa
 * Runtime complexity `O(n)` where `n` is number of nodes in the binary tree
 * Space complexity `O(h)` to store the recursive calls where `h` is the height of the binary tree
 ---
-## [15. Merge Intervals](./python/sorted_array_to_BST.py)
+## [15. Merge Intervals](python/binary%20search%20tree/sorted_array_to_BST.py)
 
 * **Completed Date**: 11/01/2019
 * **Category**: Easy
@@ -528,7 +528,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 * Runtime complexity `O(n)`
 * Space complexity `O(n)`
 ---
-## [16. Merge Intervals](./python/merge_intervals.py)
+## [16. Merge Intervals](python/others/merge_intervals.py)
 
 * **Completed Date**: 11/01/2019
 * **Category**: Medium

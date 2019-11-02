@@ -1,21 +1,21 @@
-'''
+"""
 Hi, here's your problem today. This problem was recently asked by Apple:
 
 Given an integer k and a binary search tree, find the floor (less than or equal to) of k, and the ceiling (larger than or equal to) of k. If either does not exist, then print them as None.
 
 Here is the definition of a node for the tree.
+"""
 
-'''
 
 class TreeNode:
-  def __init__(self, value):
-    self.left = None
-    self.right = None
-    self.value = value
+    def __init__(self, value):
+        self.left = None
+        self.right = None
+        self.value = value
+
 
 class Solution:
-
-    def findCeilingFloor(self, root: TreeNode, k: int):
+    def find_ceiling_floor(self, root: TreeNode, k: int):
         ceiling = self.ceiling(root, k)
         floor = self.floor(root, k)
 
@@ -23,8 +23,7 @@ class Solution:
         floor_value = None if floor is None else floor.value
 
         return ceiling_value, floor_value
-        
-        
+
     def ceiling(self, node: TreeNode, k: int) -> TreeNode:
         """Find the ceiling node given a key k.
         
@@ -80,7 +79,6 @@ class Solution:
         floor_candidate = self.floor(node.right, k)
         return node if floor_candidate is None else floor_candidate
 
-        
 
 if __name__ == "__main__":
     # both ceiling and floor exists
@@ -95,10 +93,10 @@ if __name__ == "__main__":
     root.right.right = TreeNode(14) 
 
     solution = Solution()
-    assert solution.findCeilingFloor(root, 5) == (6, 4)
+    assert solution.find_ceiling_floor(root, 5) == (6, 4)
     
     # no ceiling
-    assert solution.findCeilingFloor(root, 15) == (None, 14)
+    assert solution.find_ceiling_floor(root, 15) == (None, 14)
 
     # no floor
-    assert solution.findCeilingFloor(root, 1) == (2, None)
+    assert solution.find_ceiling_floor(root, 1) == (2, None)
